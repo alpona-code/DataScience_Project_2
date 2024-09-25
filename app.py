@@ -1,7 +1,7 @@
+import streamlit as st
 from dotenv import load_dotenv
 load_dotenv() ## load env varibles
 
-import streamlit as st ## for frontend
 import os # operating system
 import google.generativeai as genai
 
@@ -13,7 +13,6 @@ def get_gemini_model(question):
     response=model.generate_content(question)
     return response.text
 
-import streamlit as st
 
 # Set the page configuration with a custom title and layout settings
 st.set_page_config(page_title="Gemini Q&A Demo", layout="centered", page_icon="✨")
